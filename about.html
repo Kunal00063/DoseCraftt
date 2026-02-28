@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | DoseCraftt - Advanced Treatment Planning</title>
+    <meta name="description"
+        content="Learn about DoseCraftt, our mission, and the expert team of dosimetrists and medical physicists behind our world-class remote treatment planning services.">
+
+    <!-- Fonts -->
+    <link rel="icon" type="image/png" href="./Asset/Logo_blank.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN for development) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#0B1B3D',
+                            blue: '#0066CC',
+                            lightBlue: '#E6F0FA',
+                            slate: '#64748B',
+                            light: '#F8FAFC',
+                            accent: '#0EA5E9'
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'glow': '0 0 20px rgba(14, 165, 233, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-brand-light text-gray-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- Header Section -->
+    <header id="main-header"
+        class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 relative z-50 group">
+                    <img src="Asset/Logo_blank.png" alt="DoseCraftt"
+                        class="h-10 w-auto object-contain rounded drop-shadow-sm">
+                    <span
+                        class="font-heading font-bold text-2xl text-brand-navy tracking-tight group-hover:text-brand-blue transition-colors">Dose<span
+                            class="text-brand-blue">Craftt</span></span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex flex-1 justify-center items-center space-x-8">
+                    <a href="index.html"
+                        class="text-sm font-medium text-gray-600 hover:text-brand-blue transition-colors px-3 py-2">Home</a>
+                    <a href="services.html"
+                        class="text-sm font-medium text-gray-600 hover:text-brand-blue transition-colors px-3 py-2">Services</a>
+                    <a href="index.html#process"
+                        class="text-sm font-medium text-gray-600 hover:text-brand-blue transition-colors px-3 py-2">Process</a>
+                    <a href="about.html"
+                        class="text-sm font-medium text-brand-blue border-b-2 border-brand-blue px-3 py-2">About Us</a>
+                    <a href="contact.html"
+                        class="text-sm font-medium text-gray-600 hover:text-brand-blue transition-colors px-3 py-2">Contact</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:flex items-center">
+                    <a href="index.html#contact"
+                        class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-full text-white bg-brand-navy hover:bg-brand-blue transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue">
+                        Get a Quote
+                        <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center z-50">
+                    <button id="mobile-menu-btn" class="text-brand-navy hover:text-brand-blue focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+                        <i data-lucide="x" class="w-6 h-6 hidden" id="close-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden pt-24 px-6 flex flex-col">
+        <nav class="flex flex-col space-y-6 text-center mt-8">
+            <a href="index.html"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Home</a>
+            <a href="services.html"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Services</a>
+            <a href="index.html#process"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Process</a>
+            <a href="about.html"
+                class="text-xl font-heading font-brand-blue py-2 border-b border-brand-blue mobile-link">About
+                Us</a>
+            <a href="contact.html"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Contact</a>
+        </nav>
+        <div class="mt-12 flex justify-center">
+            <a href="index.html#contact"
+                class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-brand-navy hover:bg-brand-blue transition-all mobile-link">
+                Get a Quote
+            </a>
+        </div>
+    </div>
+
+    <main class="pt-20">
+        <!-- Page Hero -->
+        <section class="relative bg-brand-navy py-20 lg:py-24 overflow-hidden bg-cover bg-center"
+            style="background-image: url('Asset/HeroImage.png');">
+            <!-- Overlay and Abstract Background -->
+            <div class="absolute inset-0 bg-brand-navy/85 z-0"></div>
+            <div
+                class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-blue/40 via-transparent to-brand-navy/80 z-0">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6 animate-fade-in">Pioneering the
+                    Future of <br /> <span class="text-brand-accent">Remote Dosimetry</span></h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto font-light animate-fade-in"
+                    style="animation-delay: 0.1s;">We believe geography should never dictate the quality of a patient's
+                    cancer care.</p>
+            </div>
+
+            <!-- Bottom Curve Divider -->
+            <div class="absolute bottom-0 w-full overflow-hidden leading-none z-10">
+                <svg class="relative block w-full h-12 md:h-16 fill-white" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z">
+                    </path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Our Story & Mission Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    <div class="scroll-reveal relative">
+                        <!-- Image Composition -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-square md:aspect-[4/3]">
+                            <img src="Asset/About us.png" alt="Clinical Professionals"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 to-transparent"></div>
+                            <div class="absolute bottom-8 left-8 right-8">
+                                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                                    <p class="text-white font-heading font-semibold text-lg mb-2">Our Mission</p>
+                                    <p class="text-gray-200 text-sm">To empower oncology departments globally with
+                                        unparalleled planning expertise, ensuring every patient receives the highest
+                                        standard of care without delay.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Decorative Element -->
+                        <div
+                            class="absolute -z-10 -bottom-8 -left-8 w-64 h-64 bg-brand-lightBlue rounded-full blur-3xl opacity-50">
+                        </div>
+                    </div>
+
+                    <div class="scroll-reveal delay-100">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-light text-brand-blue text-sm font-semibold mb-6 border border-brand-blue/10">
+                            <i data-lucide="bookmark" class="w-4 h-4"></i> The DoseCraftt Story
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-navy mb-6">Born from Clinical
+                            Necessity</h2>
+
+                        <div class="prose prose-lg text-gray-600 max-w-none">
+                            <p class="mb-4">
+                                DoseCraftt was founded by a core group of board-certified medical physicists and senior
+                                dosimetrists who recognized a growing crisis in radiation oncology: the increasing
+                                complexity of treatment planning coupled with a global shortage of specialized clinical
+                                staff.
+                            </p>
+                            <p class="mb-4">
+                                Clinics were struggling to maintain turnaround times, risking delays in vital patient
+                                care. Furthermore, smaller or rural centers often lacked access to the niche expertise
+                                required for complex SRS and SBRT cases.
+                            </p>
+                            <p>
+                                We built DoseCraftt to bridge this gap. By utilizing secure, high-speed remote
+                                infrastructure, our world-class team can seamlessly integrate into any department's
+                                workflow. We don't just act as an outsourced vendor; we operate as a dedicated extension
+                                of your clinical team.
+                            </p>
+                        </div>
+
+                        <div class="mt-8 grid grid-cols-2 gap-6 pt-8 border-t border-gray-100">
+                            <div>
+                                <h4 class="font-heading font-bold text-brand-navy text-xl mb-2">Experience</h4>
+                                <p class="text-gray-600 text-sm">Decades of combined clinical experience across all
+                                    major treatment modalities.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-brand-navy text-xl mb-2">Innovation</h4>
+                                <p class="text-gray-600 text-sm">Constant refinement of workflows to leverage the latest
+                                    TPS automation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership/Team Section (Abstracted, no personal photos per medical tech norm unless specific) -->
+        <section id="team" class="py-24 bg-brand-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 scroll-reveal">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-navy mb-4">Our Caliber of Experts
+                    </h2>
+                    <p class="text-brand-slate max-w-2xl mx-auto">When you partner with DoseCraftt, you are gaining
+                        access to a highly vetted brain trust of clinical professionals.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Profile Type 1 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 text-center scroll-reveal delay-100 group hover:-translate-y-3 hover:shadow-2xl hover:border-brand-blue/30 transition-all duration-300">
+                        <div
+                            class="w-20 h-20 mx-auto bg-brand-light border-2 border-white rounded-full flex items-center justify-center mb-6 shadow-md shadow-brand-blue/10 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="award" class="w-10 h-10 text-brand-blue"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-navy mb-2">Board-Certified Physicists</h3>
+                        <p class="text-sm text-brand-blue font-semibold mb-4">ABR / CCPM Certified</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Providing high-level oversight, independent
+                            dose calculation checks, and comprehensive QA review to ensure absolute safety and accuracy.
+                        </p>
+                    </div>
+
+                    <!-- Profile Type 2 -->
+                    <div
+                        class="bg-brand-navy p-8 rounded-2xl shadow-xl text-center scroll-reveal delay-200 transform scale-105 group hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,102,204,0.3)] hover:scale-[1.07] transition-all duration-300">
+                        <div
+                            class="w-20 h-20 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-6 border border-white/20 group-hover:bg-brand-blue group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="activity" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-white mb-2">Senior Dosimetrists</h3>
+                        <p class="text-sm text-brand-accent font-semibold mb-4">MDCB Certified (CMD)</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">The core of our planning engine. Each
+                            dosimetrist has extensive experience navigating complex IMRT/VMAT optimization scenarios
+                            across multiple vendor platforms.</p>
+                    </div>
+
+                    <!-- Profile Type 3 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 text-center scroll-reveal delay-300 group hover:-translate-y-3 hover:shadow-2xl hover:border-brand-blue/30 transition-all duration-300">
+                        <div
+                            class="w-20 h-20 mx-auto bg-brand-light border-2 border-white rounded-full flex items-center justify-center mb-6 shadow-md shadow-brand-blue/10 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="shield-check" class="w-10 h-10 text-brand-blue"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-navy mb-2">Quality Assurance Specs</h3>
+                        <p class="text-sm text-brand-blue font-semibold mb-4">Workflow Experts</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Ensuring that every plan adheres strictly to
+                            specific departmental protocols, RTOG guidelines, and customized physician preferences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Careers -->
+        <section id="careers" class="py-20 bg-brand-navy relative overflow-hidden bg-cover bg-center"
+            style="background-image: url('Asset/city.jpg');">
+            <!-- Background Overlays for blend effect -->
+            <div class="absolute inset-0 bg-brand-blue/80 mix-blend-multiply z-0"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent opacity-90 z-0"></div>
+            <div
+                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIi8+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMwMDAiLz4KPC9zdmc+')] opacity-5 z-0">
+            </div>
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10 scroll-reveal">
+                <h2 class="text-3xl font-heading font-bold text-white mb-6">Join the DoseCraftt Team</h2>
+                <p class="text-brand-lightBlue mb-10 text-lg max-w-2xl mx-auto">We are always looking for exceptional
+                    CMDs and Physicists to join our remote network. Enjoy flexible hours, competitive compensation, and
+                    a collaborative environment.</p>
+                <a href="mailto:careers@dosecraftt.com"
+                    class="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-navy font-bold rounded-full hover:bg-brand-light transition-colors shadow-lg">
+                    View Open Positions <i data-lucide="external-link" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 pt-16 pb-8 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 flex-wrap">
+                <!-- Branding -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="Asset/Logo_blank.png" alt="DoseCraftt" class="h-8 w-auto object-contain rounded">
+                        <span class="font-heading font-bold text-xl text-white tracking-tight">Dose<span
+                                class="text-brand-blue">Craftt</span></span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">Delivering world-class radiotherapy treatment planning
+                        services remotely, helping healthcare facilities provide the best patient care.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors bg-gray-800 p-2 rounded-full hover:bg-brand-blue"><i
+                                data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors bg-gray-800 p-2 rounded-full hover:bg-brand-blue"><i
+                                data-lucide="twitter" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-span-1">
+                    <h4 class="text-white font-heading font-semibold mb-6">Company</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="index.html" class="hover:text-brand-accent transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-brand-accent transition-colors">About Us</a></li>
+                        <li><a href="#team" class="hover:text-brand-accent transition-colors">Our Team</a></li>
+                        <li><a href="#careers" class="hover:text-brand-accent transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="col-span-1">
+                    <h4 class="text-white font-heading font-semibold mb-6">Legal</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">HIPAA Compliance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-span-1">
+                    <h4 class="text-white font-heading font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-blue flex-shrink-0"></i>
+                            <span>123 Medical Plaza Drive<br />Suite 500<br />Boston, MA 02115</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-blue flex-shrink-0"></i>
+                            <span>+91 (800) 555-1234</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-blue flex-shrink-0"></i>
+                            <span>info@dosecraftt.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 DoseCraftt. All rights reserved. | HIPAA Compliant | Accredited by ACR | ISO 9001:2015
+                </p>
+                <!-- Back to top -->
+                <a href="#main-header"
+                    class="mt-4 md:mt-0 text-brand-slate hover:text-white transition-colors flex items-center">
+                    Back to top <i data-lucide="arrow-up" class="ml-1 w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
