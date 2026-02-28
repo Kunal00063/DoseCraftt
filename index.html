@@ -82,6 +82,8 @@
                     <a href="about.html"
                         class="text-sm font-medium text-gray-600 hover:text-brand-blue transition-colors px-3 py-2">About
                         Us</a>
+                    <a href="contact.html"
+                        class="text-sm font-medium text-gray-600 hover:text-brand-blue transition-colors px-3 py-2">Contact</a>
                 </nav>
 
                 <!-- Desktop CTA -->
@@ -102,29 +104,31 @@
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu"
-            class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden pt-24 px-6 flex flex-col">
-            <nav class="flex flex-col space-y-6 text-center mt-8">
-                <a href="index.html"
-                    class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Home</a>
-                <a href="services.html"
-                    class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Services</a>
-                <a href="index.html#process"
-                    class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Process</a>
-                <a href="about.html"
-                    class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">About
-                    Us</a>
-            </nav>
-            <div class="mt-12 flex justify-center">
-                <a href="#contact"
-                    class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-brand-navy hover:bg-brand-blue transition-all mobile-link">
-                    Get a Quote
-                </a>
-            </div>
-        </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden pt-24 px-6 flex flex-col">
+        <nav class="flex flex-col space-y-6 text-center mt-8">
+            <a href="index.html"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Home</a>
+            <a href="services.html"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Services</a>
+            <a href="index.html#process"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Process</a>
+            <a href="about.html"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">About
+                Us</a>
+            <a href="contact.html"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Contact</a>
+        </nav>
+        <div class="mt-12 flex justify-center">
+            <a href="#contact"
+                class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-brand-navy hover:bg-brand-blue transition-all mobile-link">
+                Get a Quote
+            </a>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main class="">
@@ -201,8 +205,16 @@
                             class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-brand-blue/30 to-brand-accent/20 rounded-full filter blur-[80px] z-0">
                         </div>
 
-                        <img src="Asset/Hero right side.png" alt="Hero Featured Graphic"
-                            class="relative w-full max-w-[550px] ml-auto object-contain transform hover:scale-[1.02] transition-transform duration-700 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10">
+                        <!-- Hero Image Slideshow -->
+                        <div
+                            class="relative w-full max-w-[550px] ml-auto aspect-square md:aspect-[4/3] z-10 hero-slideshow drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                            <img src="Asset/HERO_IMAGE1.png" alt="Hero Featured Graphic 1"
+                                class="absolute inset-0 w-full h-full object-contain transform hover:scale-[1.02] transition-opacity duration-1000 ease-in-out opacity-100 hero-slide">
+                            <img src="Asset/HERO_IMAGE2.png" alt="Hero Featured Graphic 2"
+                                class="absolute inset-0 w-full h-full object-contain transform hover:scale-[1.02] transition-opacity duration-1000 ease-in-out opacity-0 hero-slide">
+                            <img src="Asset/HERO_IMAGE3.png" alt="Hero Featured Graphic 3"
+                                class="absolute inset-0 w-full h-full object-contain transform hover:scale-[1.02] transition-opacity duration-1000 ease-in-out opacity-0 hero-slide">
+                        </div>
 
                         <!-- Floating Glassmorphic Stat Card -->
                         <div
@@ -575,17 +587,19 @@
                 </p>
 
                 <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl text-left">
-                    <form id="intake-form" class="space-y-6">
+                    <form id="intake-form" class="space-y-6" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="dd7c285a-b47d-480d-b36a-27d6c964063f">
+                        <input type="hidden" name="subject" value="New Intake Request from DoseCraftt">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                                <input type="text"
+                                <input type="text" name="fullName" required
                                     class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all"
                                     placeholder="Dr. Jane Doe">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                                <input type="email"
+                                <input type="email" name="email" required
                                     class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all"
                                     placeholder="jane.doe@clinic.com">
                             </div>
@@ -595,7 +609,7 @@
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Current Planning
                                     System</label>
-                                <select
+                                <select name="planningSystem" required
                                     class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all bg-white">
                                     <option>Select System...</option>
                                     <option>Varian Eclipse</option>
@@ -606,7 +620,7 @@
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Urgency Level</label>
-                                <select
+                                <select name="urgencyLevel" required
                                     class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all bg-white">
                                     <option>Immediate / Emergency</option>
                                     <option>24-48 Hours</option>
@@ -617,12 +631,12 @@
 
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
-                            <textarea rows="4"
+                            <textarea rows="4" name="projectDetails" required
                                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all"
                                 placeholder="Tell us about your clinic's needs..."></textarea>
                         </div>
 
-                        <button type="button"
+                        <button type="submit"
                             class="w-full py-4 px-6 bg-brand-blue hover:bg-brand-accent text-white rounded-lg font-bold text-lg transition-all shadow-md hover:shadow-lg flex justify-center items-center">
                             Submit Intake <i data-lucide="send" class="ml-2 w-5 h-5"></i>
                         </button>

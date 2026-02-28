@@ -63,7 +63,7 @@
 
                 <!-- Logo -->
                 <a href="index.html" class="flex-shrink-0 flex items-center gap-2 relative z-50 group">
-                    <img src="Asset/logo.png" alt="DoseCraftt"
+                    <img src="Asset/Logo_blank.png" alt="DoseCraftt"
                         class="h-10 w-auto object-contain rounded drop-shadow-sm">
                     <span
                         class="font-heading font-bold text-2xl text-brand-navy tracking-tight group-hover:text-brand-blue transition-colors">Dose<span
@@ -81,6 +81,8 @@
                     <a href="about.html"
                         class="text-sm font-medium text-gray-600 hover:text-brand-blue transition-colors px-3 py-2">About
                         Us</a>
+                    <a href="contact.html"
+                        class="text-sm font-medium text-brand-blue border-b-2 border-brand-blue px-3 py-2">Contact</a>
                 </nav>
 
                 <!-- Desktop CTA -->
@@ -101,29 +103,31 @@
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu"
-            class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden pt-24 px-6 flex flex-col">
-            <nav class="flex flex-col space-y-6 text-center mt-8">
-                <a href="index.html"
-                    class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Home</a>
-                <a href="services.html"
-                    class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Services</a>
-                <a href="index.html#process"
-                    class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Process</a>
-                <a href="about.html"
-                    class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">About
-                    Us</a>
-            </nav>
-            <div class="mt-12 flex justify-center">
-                <a href="contact.html"
-                    class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-brand-navy hover:bg-brand-blue transition-all mobile-link">
-                    Get a Quote
-                </a>
-            </div>
-        </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden pt-24 px-6 flex flex-col">
+        <nav class="flex flex-col space-y-6 text-center mt-8">
+            <a href="index.html"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Home</a>
+            <a href="services.html"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Services</a>
+            <a href="index.html#process"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">Process</a>
+            <a href="about.html"
+                class="text-xl font-heading font-semibold text-brand-navy hover:text-brand-blue py-2 border-b border-gray-100 mobile-link">About
+                Us</a>
+            <a href="contact.html"
+                class="text-xl font-heading font-brand-blue py-2 border-b border-brand-blue mobile-link">Contact</a>
+        </nav>
+        <div class="mt-12 flex justify-center">
+            <a href="contact.html"
+                class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-brand-navy hover:bg-brand-blue transition-all mobile-link">
+                Get a Quote
+            </a>
+        </div>
+    </div>
 
     <main class="pt-20">
         <!-- Page Hero -->
@@ -205,15 +209,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="mt-12">
-                                <p class="text-sm text-gray-400 mb-4">Secure communication portal available for existing
-                                    clients.</p>
-                                <a href="#"
-                                    class="inline-flex items-center text-brand-accent hover:text-white transition-colors font-medium">
-                                    Client Login <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
 
@@ -234,7 +229,10 @@
                             </div>
                         </div>
 
-                        <form id="contact-page-form" class="space-y-6">
+                        <form id="contact-page-form" class="space-y-6" action="https://api.web3forms.com/submit"
+                            method="POST">
+                            <input type="hidden" name="access_key" value="dd7c285a-b47d-480d-b36a-27d6c964063f">
+                            <input type="hidden" name="subject" value="New Contact Message from DoseCraftt">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First
@@ -290,18 +288,6 @@
                                     placeholder="Please provide details about your TPS, volume requirements, or emergency needs..."></textarea>
                             </div>
 
-                            <div class="flex items-start">
-                                <div class="flex items-center h-5">
-                                    <input id="privacy" name="privacy" type="checkbox" required
-                                        class="w-4 h-4 text-brand-blue bg-white border-gray-300 rounded focus:ring-brand-blue">
-                                </div>
-                                <div class="ml-3 text-sm">
-                                    <label for="privacy" class="font-medium text-gray-700">I agree to the <a href="#"
-                                            class="text-brand-blue hover:underline">Privacy Policy</a>.</label>
-                                    <p id="privacy-description" class="text-gray-500 text-xs mt-1">We will only use this
-                                        information to respond to your inquiry.</p>
-                                </div>
-                            </div>
 
                             <button type="submit"
                                 class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-brand-blue hover:bg-brand-accent text-white rounded-lg font-bold text-lg transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue">
@@ -322,7 +308,7 @@
                 <!-- Branding -->
                 <div class="col-span-1 md:col-span-1">
                     <div class="flex items-center gap-2 mb-6">
-                        <img src="Asset/logo.png" alt="DoseCraftt" class="h-8 w-auto object-contain rounded">
+                        <img src="Asset/Logo_blank.png" alt="DoseCraftt" class="h-8 w-auto object-contain rounded">
                         <span class="font-heading font-bold text-xl text-white tracking-tight">Dose<span
                                 class="text-brand-blue">Craftt</span></span>
                     </div>
@@ -395,34 +381,6 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
-    <script>
-        // Simple form validation and success message for demo purposes
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('contact-page-form');
-            const successMsg = document.getElementById('form-success');
-
-            if (form) {
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault(); // Prevent actual submission for demo
-
-                    // Basic HTML5 validation is handled by the browser due to 'required' attributes.
-                    // If we reach here, the form is valid.
-
-                    // Show success message
-                    successMsg.classList.remove('hidden');
-
-                    // Reset form
-                    form.reset();
-
-                    // Optionally scroll to top of form
-                    successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-                    // Re-initialize icons just in case
-                    lucide.createIcons();
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>
